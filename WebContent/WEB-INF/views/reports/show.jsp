@@ -25,6 +25,19 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>出勤時間</th>
+                            <td>
+                                <pre><c:out value="${report.syukin}" /></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>退勤時間</th>
+                            <td>
+                                <pre><c:out value="${report.taikin}" /></pre>
+                            </td>
+                        </tr>
+
+                        <tr>
                             <th>登録日時</th>
                             <td>
                                 <fmt:formatDate value="${report.created_at}" pattern="yyyy-MM-dd HH:mm:ss" />
