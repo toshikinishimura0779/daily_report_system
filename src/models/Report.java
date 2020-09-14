@@ -25,14 +25,7 @@ import javax.persistence.Table;
         name = "getReportsCount",
         query = "SELECT COUNT(r) FROM Report AS r"
         ),
-@NamedQuery(
-        name = "getMyAllReports",
-        query = "SELECT r FROM Report AS r WHERE r.employee = :employee ORDER BY r.id DESC"
-        ),
-@NamedQuery(
-        name = "getMyReportsCount",
-        query = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :employee"
-        )
+
 })
 @Entity
 public class Report {
@@ -50,6 +43,13 @@ public class Report {
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;
+
+    @Column(name = "syukin", length = 4, nullable = false)
+    private String syukin;
+
+    @Column(name = "taikin", length = 4, nullable = false)
+    private String taikin;
+
 
     @Lob
     @Column(name = "content", nullable = false)
@@ -91,6 +91,22 @@ public class Report {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getSyukin() {
+        return syukin;
+    }
+
+    public void setSyukin(String syukin) {
+        this.syukin = syukin;
+    }
+
+    public String getTaikin() {
+        return taikin;
+    }
+
+    public void setTaikin(String taikin) {
+        this.taikin = taikin;
     }
 
     public String getContent() {
