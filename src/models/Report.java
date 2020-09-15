@@ -44,10 +44,10 @@ public class Report {
     @Column(name = "title", length = 255, nullable = false)
     private String title;
 
-    @Column(name = "syukin", length = 4, nullable = false)
+    @Column(name = "syukin", length = 10, nullable = false)
     private String syukin;
 
-    @Column(name = "taikin", length = 4, nullable = false)
+    @Column(name = "taikin", length = 10, nullable = false)
     private String taikin;
 
 
